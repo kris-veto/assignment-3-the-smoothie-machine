@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Order Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container"> <!-- Main container for the form -->
+        <h1>Mc Smooties</h1>
+        <form id="smoothie-form" action="" method="">  <!-- Smoothie order form -->
+            <fieldset>
+                <legend>Order Your Smoothie</legend>
+                    <div>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>  <!-- Input for customer name -->
+                    </div>
+                    <div>
+                        <label for="base">Choose a base:</label>
+                        <select id="base" name="base" required>  <!-- Dropdown to select smoothie base -->
+                            <option value="milk">Milk</option>
+                            <option value="yogurt">Yogurt</option>
+                            <option value="juice">Juice</option>
+                            <option value="water">Water</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ingredients">Choose ingredients:</label>
+                        <br />
+                        <select id="ingredients" name="ingredients" multiple required> <!-- Multi-select for ingredients -->
+                            <option value="banana">Banana</option>
+                            <option value="strawberry">Strawberry</option>
+                            <option value="blueberry">Blueberry</option>
+                            <option value="guaba">Guaba</option>
+                            <option value="kiwi">Kiwi</option>
+                            <option value="spinach">Spinach</option>
+                            
+                        </select>
+                    </div>
+                    <div>
+                        <label for="size">Choose a size:</label>   <!-- Radio buttons to select size -->
+                        <br />
+                        <input type="radio" id="small" name="size" value="small" required>
+                        <label for="small">Small</label>
+                        <input type="radio" id="medium" name="size" value="medium" required>
+                        <label for="medium">Medium</label>
+                        <input type="radio" id="large" name="size" value="large" required>
+                        <label for="large">Large</label>
+                    </div>
+                     <!-- Order button to submit the form and resest-->
+                    <button type="button" id="order-button">Order</button><button type="reset">Clear form</button>
+                </fieldset>        
+        </form>
+        <div id="order-summary"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
